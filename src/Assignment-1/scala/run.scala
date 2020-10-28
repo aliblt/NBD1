@@ -65,6 +65,12 @@ object run {
     else remove_zeros(l.tail)
   }
 
+  def patrn(z: Option[String]) = z match
+  {
+    case Some(s) => (s)
+    case None => ("key not found")
+  }
+
   def main(args: Array[String]): Unit = {
 
     val daysOfWeek = List("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
@@ -105,9 +111,12 @@ object run {
     val nonZeroValues = remove_zeros(zeroValues)
     println(nonZeroValues)
 
-
     // 10th part
-
+    val a = Map("J.R.R Tolkien" -> "author", "The Lord of the Rings" -> "book")
+    println(patrn(a.get("J.R.R Tolkien")))
+    println(patrn(a.get("Hobbit")))
+    println(a.getOrElse("The Lord of The Rings", "masterpiece"))
+    println(a.getOrElse("Hobbit", "book"))
   }
 
 }
