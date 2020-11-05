@@ -107,7 +107,13 @@ object run2 {
 
     val p4 = new Person2("Bilbo", "Baggins", 40)
     println("Person tax:" + p4.tax)
-    var employee = new Person2("Thorin", "Oakenshield", 30) with Employee
+    val employee = new Person2("Thorin", "Oakenshield", 30) with Employee
+    val teacher = new Person2("Samwise", "Gamgee", 50) with Teacher
+    employee.salary = 4000
+    teacher.salary = 4500
+    println("Employee salary and tax:" + employee.salary + " " + employee.tax)
+    println("Teacher salary and tax:" + teacher.salary + " " + teacher.tax)
+    println()
 
     val employee_student = new Person2("Bob", "Ross", 10) with Employee with Student
     val student_employee = new Person2( "Fredrick", "Chopin", 20) with Student with Employee
