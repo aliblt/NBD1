@@ -44,15 +44,16 @@ object run2 {
   }
 
   trait Employee extends Person2{
-    private var salary: Double = 0
+    private var _salary: Double = 0
 
-    def getSalary = salary
+    def salary = _salary
+    def salary_= (value:Double):Unit = _salary = value
 
-    override def tax: Double = salary * 0.2
+    override def tax: Double = _salary * 0.2
   }
 
   trait Teacher extends Employee {
-    override def tax: Double = getSalary * 0.1
+    override def tax: Double = salary * 0.1
   }
 
   trait Student extends Person2 {
@@ -105,8 +106,20 @@ object run2 {
     // Task 5
 
     val p4 = new Person2("Bilbo", "Baggins", 40)
-    println("Employee tax:" + p4.tax)
-    val employee = new Person2("Thorin", "Oakenshield", 30) with Employee
+    println("Person tax:" + p4.tax)
+    var employee = new Person2("Thorin", "Oakenshield", 30) with Employee
+
+    val employee_student = new Person2("Bob", "Ross", 10) with Employee with Student
+    val student_employee = new Person2( "Fredrick", "Chopin", 20) with Student with Employee
+
+    println(" Emp-Student tax" + employee_student.tax)
+    println(" Student-Emp tax" + student_employee.tax)
+    employee_student.salary = 3500
+    student_employee.salary = 3600
+    println("After salary changes")
+    println(" Emp-Student(3500 salary) tax" + employee_student.tax)
+    println(" Student-Emp(3600 salary) tax" + student_employee.tax)
+
 
   }
 
