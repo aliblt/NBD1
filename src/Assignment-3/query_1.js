@@ -1,1 +1,1 @@
-db.people.findOne()
+printjson(db.people.findOne())

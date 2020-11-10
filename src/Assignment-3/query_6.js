@@ -1,0 +1,2 @@
+printjson(db.people.insert({"sex":"Male","first_name":"Ali","last_name":"Bulut","job":"Student","email":"ali99999999@gmail.com","location":{"city":"Warsaw","address":{"streetname":"Al. Jerozolimskie","streetnumber":"666"}},"description":"To be or not to be","height":"177","weight":"60","birth_date":"1996-02-21T02:55:03Z","nationality":"Turkey","credit":[{"type":"switch","number":"1234900000012345","currency":"PLN","balance":"999.99"}]}) )
+printjson(db.people.findOne({first_name: "Ali", last_name: "Bulut"}))

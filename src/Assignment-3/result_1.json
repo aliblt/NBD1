@@ -25,4 +25,10 @@
       "balance" : "4463.86"
     }
   ]
-}
+}MongoDB shell version v4.4.1
+connecting to: mongodb://127.0.0.1:27017/nbd?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("0f6297eb-d0f3-45e6-b4d5-a9d51b16520a") }
+MongoDB server version: 4.4.1
+{"t":{"$date":"2020-11-10T13:31:47.982Z"},"s":"E",  "c":"-",        "id":22779,   "ctx":"main","msg":"file [{filename}] doesn't exist","attr":{"filename":"quert_1.js"}}
+failed to load: quert_1.js
+exiting with code -3
