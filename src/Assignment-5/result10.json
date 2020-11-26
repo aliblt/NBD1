@@ -1,0 +1,341 @@
+﻿MATCH p=(:Person)-[]->(m:Movie) WHERE m.title='Captain America: The First Avenger' RETURN p
+[
+  {
+    "p": {
+"start": {
+"identity": 184,
+"labels": [
+          "Person"
+        ],
+"properties": {
+"name": "Samuel L. Jackson"
+        }
+      },
+"end": {
+"identity": 185,
+"labels": [
+          "Movie"
+        ],
+"properties": {
+"title": "Captain America: The First Avenger",
+"released": 2011
+        }
+      },
+"segments": [
+        {
+          "start": {
+"identity": 184,
+"labels": [
+              "Person"
+            ],
+"properties": {
+"name": "Samuel L. Jackson"
+            }
+          },
+          "relationship": {
+"identity": 256,
+"start": 184,
+"end": 185,
+"type": "ACTED_IN",
+"properties": {
+
+            }
+          },
+          "end": {
+"identity": 185,
+"labels": [
+              "Movie"
+            ],
+"properties": {
+"title": "Captain America: The First Avenger",
+"released": 2011
+            }
+          }
+        }
+      ],
+"length": 1.0
+    }
+  },
+  {
+    "p": {
+"start": {
+"identity": 4,
+"labels": [
+          "Person"
+        ],
+"properties": {
+"name": "Hugo Weaving",
+"born": 1960
+        }
+      },
+"end": {
+"identity": 185,
+"labels": [
+          "Movie"
+        ],
+"properties": {
+"title": "Captain America: The First Avenger",
+"released": 2011
+        }
+      },
+"segments": [
+        {
+          "start": {
+"identity": 4,
+"labels": [
+              "Person"
+            ],
+"properties": {
+"name": "Hugo Weaving",
+"born": 1960
+            }
+          },
+          "relationship": {
+"identity": 255,
+"start": 4,
+"end": 185,
+"type": "ACTED_IN",
+"properties": {
+
+            }
+          },
+          "end": {
+"identity": 185,
+"labels": [
+              "Movie"
+            ],
+"properties": {
+"title": "Captain America: The First Avenger",
+"released": 2011
+            }
+          }
+        }
+      ],
+"length": 1.0
+    }
+  },
+  {
+    "p": {
+"start": {
+"identity": 183,
+"labels": [
+          "Person"
+        ],
+"properties": {
+"name": "Chris Evans"
+        }
+      },
+"end": {
+"identity": 185,
+"labels": [
+          "Movie"
+        ],
+"properties": {
+"title": "Captain America: The First Avenger",
+"released": 2011
+        }
+      },
+"segments": [
+        {
+          "start": {
+"identity": 183,
+"labels": [
+              "Person"
+            ],
+"properties": {
+"name": "Chris Evans"
+            }
+          },
+          "relationship": {
+"identity": 261,
+"start": 183,
+"end": 185,
+"type": "ACTED_IN",
+"properties": {
+
+            }
+          },
+          "end": {
+"identity": 185,
+"labels": [
+              "Movie"
+            ],
+"properties": {
+"title": "Captain America: The First Avenger",
+"released": 2011
+            }
+          }
+        }
+      ],
+"length": 1.0
+    }
+  },
+  {
+    "p": {
+"start": {
+"identity": 182,
+"labels": [
+          "Person"
+        ],
+"properties": {
+"name": "Stephen McFeely"
+        }
+      },
+"end": {
+"identity": 185,
+"labels": [
+          "Movie"
+        ],
+"properties": {
+"title": "Captain America: The First Avenger",
+"released": 2011
+        }
+      },
+"segments": [
+        {
+          "start": {
+"identity": 182,
+"labels": [
+              "Person"
+            ],
+"properties": {
+"name": "Stephen McFeely"
+            }
+          },
+          "relationship": {
+"identity": 254,
+"start": 182,
+"end": 185,
+"type": "WROTE",
+"properties": {
+
+            }
+          },
+          "end": {
+"identity": 185,
+"labels": [
+              "Movie"
+            ],
+"properties": {
+"title": "Captain America: The First Avenger",
+"released": 2011
+            }
+          }
+        }
+      ],
+"length": 1.0
+    }
+  },
+  {
+    "p": {
+"start": {
+"identity": 181,
+"labels": [
+          "Person"
+        ],
+"properties": {
+"name": "Christopher Markus"
+        }
+      },
+"end": {
+"identity": 185,
+"labels": [
+          "Movie"
+        ],
+"properties": {
+"title": "Captain America: The First Avenger",
+"released": 2011
+        }
+      },
+"segments": [
+        {
+          "start": {
+"identity": 181,
+"labels": [
+              "Person"
+            ],
+"properties": {
+"name": "Christopher Markus"
+            }
+          },
+          "relationship": {
+"identity": 253,
+"start": 181,
+"end": 185,
+"type": "WROTE",
+"properties": {
+
+            }
+          },
+          "end": {
+"identity": 185,
+"labels": [
+              "Movie"
+            ],
+"properties": {
+"title": "Captain America: The First Avenger",
+"released": 2011
+            }
+          }
+        }
+      ],
+"length": 1.0
+    }
+  },
+  {
+    "p": {
+"start": {
+"identity": 180,
+"labels": [
+          "Person"
+        ],
+"properties": {
+"name": "Joe Johnston"
+        }
+      },
+"end": {
+"identity": 185,
+"labels": [
+          "Movie"
+        ],
+"properties": {
+"title": "Captain America: The First Avenger",
+"released": 2011
+        }
+      },
+"segments": [
+        {
+          "start": {
+"identity": 180,
+"labels": [
+              "Person"
+            ],
+"properties": {
+"name": "Joe Johnston"
+            }
+          },
+          "relationship": {
+"identity": 260,
+"start": 180,
+"end": 185,
+"type": "DIRECTED",
+"properties": {
+
+            }
+          },
+          "end": {
+"identity": 185,
+"labels": [
+              "Movie"
+            ],
+"properties": {
+"title": "Captain America: The First Avenger",
+"released": 2011
+            }
+          }
+        }
+      ],
+"length": 1.0
+    }
+  }
+]

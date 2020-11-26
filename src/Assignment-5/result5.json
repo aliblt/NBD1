@@ -1,0 +1,119 @@
+﻿MATCH (p:Person)-[:ACTED_IN]->(m:Movie) WHERE m.title CONTAINS "Matrix" MATCH (p)-[:ACTED_IN]->(m2:Movie) RETURN DISTINCT m2
+[
+  {
+    "m2": {
+"identity": 0,
+"labels": [
+        "Movie"
+      ],
+"properties": {
+"title": "The Matrix",
+"tagline": "Welcome to the Real World",
+"released": 1999
+      }
+    }
+  },
+  {
+    "m2": {
+"identity": 105,
+"labels": [
+        "Movie"
+      ],
+"properties": {
+"title": "Cloud Atlas",
+"tagline": "Everything is connected",
+"released": 2012
+      }
+    }
+  },
+  {
+    "m2": {
+"identity": 116,
+"labels": [
+        "Movie"
+      ],
+"properties": {
+"title": "V for Vendetta",
+"tagline": "Freedom! Forever!",
+"released": 2006
+      }
+    }
+  },
+  {
+    "m2": {
+"identity": 10,
+"labels": [
+        "Movie"
+      ],
+"properties": {
+"title": "The Matrix Revolutions",
+"tagline": "Everything that has a beginning has an end",
+"released": 2003
+      }
+    }
+  },
+  {
+    "m2": {
+"identity": 9,
+"labels": [
+        "Movie"
+      ],
+"properties": {
+"title": "The Matrix Reloaded",
+"tagline": "Free your mind",
+"released": 2003
+      }
+    }
+  },
+  {
+    "m2": {
+"identity": 154,
+"labels": [
+        "Movie"
+      ],
+"properties": {
+"title": "Something's Gotta Give",
+"released": 2003
+      }
+    }
+  },
+  {
+    "m2": {
+"identity": 87,
+"labels": [
+        "Movie"
+      ],
+"properties": {
+"title": "The Replacements",
+"tagline": "Pain heals, Chicks dig scars... Glory lasts forever",
+"released": 2000
+      }
+    }
+  },
+  {
+    "m2": {
+"identity": 100,
+"labels": [
+        "Movie"
+      ],
+"properties": {
+"title": "Johnny Mnemonic",
+"tagline": "The hottest data on earth. In the coolest head in town",
+"released": 1995
+      }
+    }
+  },
+  {
+    "m2": {
+"identity": 11,
+"labels": [
+        "Movie"
+      ],
+"properties": {
+"title": "The Devil's Advocate",
+"tagline": "Evil has its winning ways",
+"released": 1997
+      }
+    }
+  }
+]

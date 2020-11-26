@@ -1,31 +1,5 @@
-﻿MATCH (p:Person)-[r:ACTED_IN]->(m) WHERE p.name="Hugo Weaving" RETURN m
+﻿MATCH (p:Person)-[r:ACTED_IN]->(m:Movie)<-[r2:ACTED_IN]-(p2:Person) WHERE p.name="Hugo Weaving" AND p2.name="Keanu Reeves" RETURN m
 [
-  {
-    "m": {
-"identity": 105,
-"labels": [
-        "Movie"
-      ],
-"properties": {
-"title": "Cloud Atlas",
-"tagline": "Everything is connected",
-"released": 2012
-      }
-    }
-  },
-  {
-    "m": {
-"identity": 116,
-"labels": [
-        "Movie"
-      ],
-"properties": {
-"title": "V for Vendetta",
-"tagline": "Freedom! Forever!",
-"released": 2006
-      }
-    }
-  },
   {
     "m": {
 "identity": 10,

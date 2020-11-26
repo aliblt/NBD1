@@ -1,0 +1,7 @@
+CREATE (:Person {name:'Joe Johnston'}), (:Person {name:'Christopher Markus'}), (:Person{name: 'Stephen McFeely'}), (:Person {name: 'Chris Evans'}), (:Person {name: 'Samuel L. Jackson'}), (:Movie {title: 'Captain America: The First Avenger', released:2011})
+MATCH (p:Person), (m:Movie) WHERE p.name='Joe Johnston' AND m.title='Captain America: The First Avenger' CREATE (p)-[:DIRECTED]->(m)
+MATCH (p:Person), (m:Movie) WHERE p.name='Christopher Markus' AND m.title='Captain America: The First Avenger' CREATE (p)-[:WROTE]->(m)
+MATCH (p:Person), (m:Movie) WHERE p.name='Stephen McFeely' AND m.title='Captain America: The First Avenger' CREATE (p)-[:WROTE]->(m)
+MATCH (p:Person), (m:Movie) WHERE p.name='Chris Evans' AND m.title='Captain America: The First Avenger' CREATE (p)-[:ACTED_IN]->(m)
+MATCH (p:Person), (m:Movie) WHERE p.name='Hugo Weaving' AND m.title='Captain America: The First Avenger' CREATE (p)-[:ACTED_IN]->(m)
+MATCH (p:Person), (m:Movie) WHERE p.name='Samuel L. Jackson' AND m.title='Captain America: The First Avenger' CREATE (p)-[:ACTED_IN]->(m)

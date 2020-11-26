@@ -1,4 +1,5 @@
-﻿[
+﻿MATCH (n:Movie) RETURN n
+[
   {
     "n": {
 "identity": 0,
