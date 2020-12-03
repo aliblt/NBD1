@@ -6,5 +6,5 @@ RETURN path
 RETURN reduce(d=0, r in relationships(path) | d + r.distance) as dist, path order by dist
 
 3- MATCH path=(n:town {name:"Darjeeling"})-[r:twowheeler]->(m)
-WHERE r.winter='true'
+WHERE r.summer='true'
 RETURN m
