@@ -8,3 +8,11 @@ RETURN reduce(d=0, r in relationships(path) | d + r.distance) as dist, path orde
 3- MATCH path=(n:town {name:"Darjeeling"})-[r:twowheeler]->(m)
 WHERE r.summer='true'
 RETURN m
+
+4- MATCH (f:Flight)-[:ORIGIN]->(a:Airport)
+RETURN a,count(f) AS flights ORDER BY flights
+
+5- MATCH fligts=((a:Airport {name: "LAX"})<-[:ORIGIN]-(f:Flight)-[rd:DESTINATION]->(d:Airport)), tickets=((f)<-[:ASSIGN]-(t:Ticket))
+   WITH collect(d) AS reached, t
+   MATCH transfers=((n:Airport)<-[:ORIGIN]-(f:Flight)-[:DESTINATION*..6]->(d:Airport))
+   RETURN d, REDUCE(s=0, k in Nodes(transfers) | s+1 ) AS fee LIMIT 100
