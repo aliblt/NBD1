@@ -1,0 +1,33 @@
+1-
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name":"David", "surname":"Davidson", "age":23, "nationality":"English"}'  http://localhost:8090/buckets/s21501/keys/One
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name":"Lionel", "surname":"Messi", "age":32, "nationality":"Argentinian"}'  http://localhost:8090/buckets/s21501/keys/Two
+curl  -i -XPUT -H "Content-Type: application/json" -d '{"name":"Cristiano", "surname":"Ronaldo", "age":34, "nationality":"Portuguese"}'  http://localhost:8090/buckets/s21501/keys/Three
+curl  -i -XPUT -H "Content-Type: application/json" -d '{"name":"Wesley", "surname":"Sneijder", "age":25, "nationality":"Dutch"}'  http://localhost:8090/buckets/s21501/keys/Four
+curl  -i -XPUT -H "Content-Type: application/json" -d '{"name":"Mohammed", "surname":"Salah", "age":26, "nationality":"Egyptian"}'  http://localhost:8098/buckets/s16539/keys/Five
+
+2-
+curl -i http://localhost:8090/buckets/s21501/keys/One
+
+3-
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name":"David", "surname":"Davidson", "age":23, "nationality":"English", "goals"}:20'  http://localhost:8090/buckets/s21501/keys/One
+
+4-
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name":"David", "surname":"Davidson", "age":23, "nationality":"English"}'  http://localhost:8090/buckets/s21501/keys/One
+
+5-
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name":"David", "surname":"deSouza", "age":23, "nationality":"English"}'  http://localhost:8090/buckets/s21501/keys/One
+
+6-
+curl -i -XDELETE http://localhost:8090/buckets/s21501/keys/One
+
+7-
+curl -i http://localhost:8090/buckets/s21501/keys/Two
+
+8-
+curl -i -H "Content-Type: application/json" -d '{"name":"David", "surname":"Beckham", "age":40, "nationality":"English"}'  http://localhost:8090/buckets/s21501/keys
+
+9-
+curl -i http://localhost:8090/buckets/s21501/keys/9QszTCShVaP5ji9l7uqOoGI1lp
+
+10-
+curl -i -XDELETE http://localhost:8090/buckets/s21501/keys/9QszTCShVaP5ji9l7uqOoGI1lp

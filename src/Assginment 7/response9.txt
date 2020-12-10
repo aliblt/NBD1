@@ -1,0 +1,11 @@
+{"name":"David", "surname":"Beckham", "age":40, "nationality":"English"}
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8ypz/fsZw73JjYBQszGBKZMxjZbhdHnOdLwsA
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s21501>; rel="up"
+Last-Modified: Wed, 04 Dec 2020 18:32:59 GMT
+ETag: "1NAtAgEGRiRbZrDLHwUu3y"
+Date: Wed, 04 Dec 2020 18:38:14 GMT
+Content-Type: application/json
+Content-Length: 60
