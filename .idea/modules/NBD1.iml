@@ -10,10 +10,13 @@
       <sourceFolder url="file://$MODULE_DIR$/../../src/Assignment-1/scala" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../src/Assignment-2/scala" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../src/Assignment-3/scala" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../src/Assignment-8/scala" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../src/Assignment-8/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/../../target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="scala-sdk-2.12.12" level="application" />
+    <orderEntry type="library" name="com.scalapenos:riak-scala-client_2.10:0.9.0" level="project" />
   </component>
 </module>
