@@ -9,9 +9,9 @@ public class Assignment8{
 
     public static void main(String[] args) throws IOException {
 
-        IRiakClient client = null;
+        IRiakClient riakClient = null;
         try {
-            client = RiakFactory.pbcClient("127.0.0.1", 8088);
+            riakClient = RiakFactory.pbcClient("127.0.0.1", 8088);
         } catch (RiakException e) {
             e.printStackTrace();
         }
@@ -19,23 +19,25 @@ public class Assignment8{
         Bucket myBucket = null;
         String bucketName = "s21501";
         try {
-            myBucket = client.fetchBucket(bucketName).execute();
+            myBucket = riakClient.fetchBucket(bucketName).execute();
             if (myBucket == null) {
-                myBucket = client.createBucket(bucketName).execute();
+                myBucket = riakClient.createBucket(bucketName).execute();
             }
         } catch (RiakRetryFailedException e) {
             e.printStackTrace();
         }
 
-        String document= "assignment8";
+
+        // Adding element to bucket
         String key= "One";
+        String elementName= "assignment8";
         try {
-            myBucket.store(key, document).execute();
+            myBucket.store(key, elementName).execute();
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-
+        // Retrieve intial document
         String fetchedDocument = "";
         try {
             fetchedDocument = myBucket.fetch(key, String.class).execute();
@@ -44,6 +46,7 @@ public class Assignment8{
             e.printStackTrace();
         }
 
+        // Modification
         try {
             fetchedDocument = myBucket.fetch(key, String.class).execute();
             fetchedDocument +=" modify";
@@ -55,6 +58,7 @@ public class Assignment8{
             e.printStackTrace();
         }
 
+        // Deleting an element
         try {
             myBucket.delete(key).execute();
             fetchedDocument = myBucket.fetch(key, String.class).execute();
@@ -63,7 +67,7 @@ public class Assignment8{
             e.printStackTrace();
         }
 
-        client.shutdown();
+        riakClient.shutdown();
 
     }
 
